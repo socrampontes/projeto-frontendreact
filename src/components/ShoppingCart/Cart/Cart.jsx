@@ -15,7 +15,9 @@ export const Cart = (props) => {
         src="https://seeklogo.com/images/C/Carrinho_de_Compras-logo-F251151A71-seeklogo.com.png"
         alt=""
       />
-      <Items product={props.cart}/>
+      <Items product={props.cart} 
+      setCart={props.setCart}
+      />
     </ShoppingCart>
   );
 };

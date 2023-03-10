@@ -13,13 +13,22 @@ for (const obj of props.product) {
   if (obj.price > 0) counter+= obj.price;
 }
 
+const removeitem = (product) => {
+  const productRemoved = props.cart.filter((item) => {
+    if (item !== product){
+      props.setCart(props.cart.splice(product, 1))
+    }
+    } );
 
-    const mostraLista = props.product.map((c, i) => (
-      <CardFormat>
-        <Description> nome: {c.name}</Description>
+  props.setCart(productRemoved);
+  };
 
-        <Description>valor: {c.price}</Description>
-        <Button>remover</Button>
+    const cart = props.product.map((product) => (
+      <CardFormat key={product.id}>
+        <Description> nome: {product.name}</Description>
+
+        <Description>valor: {product.price}</Description>
+        <Button onClick={()=>removeitem(product)}>remover</Button>
         
       </CardFormat>
         
@@ -29,7 +38,7 @@ for (const obj of props.product) {
     <ShoppingCart>
       
       <Form>
-        <h2>Carrinho : {mostraLista}</h2>
+        <h2>Carrinho : {cart}</h2>
 
         <h4>
           Valor total:

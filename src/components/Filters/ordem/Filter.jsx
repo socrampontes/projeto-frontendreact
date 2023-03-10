@@ -11,8 +11,7 @@ export const Filters = (props) => {
   const maxValueFilter =(e)=>{
     props.setMaxFilter(e.target.value)
   }
-console.log(props.minFilter)
-console.log(props.maxFilter)
+
   return (
     <Orden>
       <Form>

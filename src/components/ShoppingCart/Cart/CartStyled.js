@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const ShoppingCart = styled.div`
-  flex-basis: 25%;
+  flex-basis: 15%;
   
   
-  border: black solid;
+  border-left: black solid 1px;
   height:60vh;
 `;
 
