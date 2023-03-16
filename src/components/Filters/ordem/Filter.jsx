@@ -1,4 +1,4 @@
-import { Form, Input, StyledLabel, Orden } from "./ordenStyled";
+import { Form, Input, StyledLabel, Orden, ButtonFilter } from "./ordenStyled";
 
 export const Filters = (props) => {
   
@@ -11,11 +11,16 @@ export const Filters = (props) => {
   const maxValueFilter =(e)=>{
     props.setMaxFilter(e.target.value)
   }
-console.log(props.minFilter)
-console.log(props.maxFilter)
+  const bntHideFilter=()=>{
+    props.setHideFilter(!props.hideFilter)
+    }
+
   return (
     <Orden>
-      <Form>
+      <div>
+      <ButtonFilter onClick={bntHideFilter}>filtros</ButtonFilter>
+      </div>
+      <Form style={{display: props.hideFilter ? "none" : "block" }}>
         <h3>Filtros</h3>
 
         <StyledLabel>Valor mínimo:</StyledLabel>

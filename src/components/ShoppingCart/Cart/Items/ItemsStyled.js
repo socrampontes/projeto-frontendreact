@@ -7,16 +7,14 @@ export const ShoppingCart = styled.div`
 export const Form = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   align-items:center;
   
 `;
 
-export const Input = styled.input`
-  padding: 8px;
-`;
 
-export const StyledLabel = styled.label`
+
+export const TagCarrinho = styled.h4`
   display: flex;
 `;
 
@@ -25,6 +23,7 @@ export const ImgCart = styled.img`
   width:70px;
   margin:1rem 0 0 2rem;
 `;
+
 
 
 

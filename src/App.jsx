@@ -13,14 +13,16 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-`;
+  `;
 
 const Container = styled.div`
+  height: 80vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   height: 100%;
   width: 100vw;
+  font-family: Arial, Helvetica, sans-serif;
 `;
 
 function App() {
@@ -30,11 +32,13 @@ function App() {
   const [maxFilter, setMaxFilter] = useState("");
   const [searchFilter, setSearchFilter] = useState("");
   const [product, setProduct] = useState(ProductList);
+  const [hideCart, setHideCart] = useState(true);
+  const [hideFilter, setHideFilter] = useState(true);
 
   return (
     <>
       <GlobalStyle />
-      <Header />
+      <Header hideCart={hideCart} setHideCart={setHideCart} />
       <Container>
         <Filters
           minFilter={minFilter}
@@ -43,6 +47,8 @@ function App() {
           setMinFilter={setMinFilter}
           setMaxFilter={setMaxFilter}
           setSearchFilter={setSearchFilter}
+          hideFilter={hideFilter}
+          setHideFilter={setHideFilter}
         />
         <Home
           searchFilter={searchFilter}
@@ -60,6 +66,8 @@ function App() {
           cart={cart}
           setAmount={setAmount}
           setCart={setCart}
+          hideCart={hideCart}
+          setHideCart={setHideCart}
         />
       </Container>
       <FooterPage />
