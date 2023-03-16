@@ -22,7 +22,7 @@ export const Home = (props) => {
 
   return (
     <HomePage>
-      <Contador>quantidade de produtos : {counter}</Contador>
+      <Contador>Quantidade de Itens: {counter}</Contador>
       <DivOrganization>
         <LabelOrdenacao htmlFor="ordem">Ordenação:</LabelOrdenacao>
         <Select id="ordem" onChange={onChangeOrdem}>

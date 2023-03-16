@@ -4,8 +4,7 @@ export const Home = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-basis: 50%;
-
-  margin: 3rem 0 1rem 1.5rem;
+ margin-top:2rem;
 `;
 
 export const StyledCard = styled.div`

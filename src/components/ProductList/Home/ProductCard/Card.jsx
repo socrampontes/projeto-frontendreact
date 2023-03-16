@@ -1,16 +1,13 @@
 import { Home, Img, CardFormat, Description, Button, Div } from "./cardStyled";
 
 export const CardProduct = (props) => {
-
-  const addCart = (product, event) => {
+  /* const addCart = (product) => {
     
     const cartItems = props.cart;
     console.log(cartItems)
     let amount = props.amount * 1;
     if (props.cart.includes(product)) {
       cartItems.filter((iten) => iten === product)[0].quantidade++;
-      amount += product.price;
-      props.setAmont(amount);
       props.setCart(cartItems);
     } else {
       product.quantidade = 1;
@@ -19,9 +16,12 @@ export const CardProduct = (props) => {
       props.setAmount(amount);
       props.setCart(cartItems);
     }
-  };
+  }; */
 
-  
+  const addCart = (product) => {
+    const novoCart = [...props.cart, product];
+  props.setCart(novoCart);
+  };
 
   return (
     <Home>
@@ -61,12 +61,10 @@ export const CardProduct = (props) => {
             </Div>
             <Div>
               <button onClick={() => addCart(product)}>
-                {" "}
                 <Button
                   src="https://seeklogo.com/images/C/Carrinho_de_Compras-logo-F251151A71-seeklogo.com.png"
                   alt=""
-                
-                />{" "}
+                />
               </button>
             </Div>
           </CardFormat>
