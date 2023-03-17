@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const Footer = styled.footer`
-  background-color:lightskyblue;
-  justify-content: center;
-  height: 8vh;
+  background-color: lightskyblue;
+  height: 8rem;
   width: 100vw;
 `;

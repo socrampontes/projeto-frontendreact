@@ -1,11 +1,11 @@
 import {
   ShoppingCart,
   Form,
-  ImgCart,
+  
   CardFormat,
   Description,
   Button,
-  TagCarrinho,
+  
 } from "./ItemsStyled";
 export const Items = (props) => {
   let counter = 0;

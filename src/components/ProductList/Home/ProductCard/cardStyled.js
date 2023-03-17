@@ -3,13 +3,11 @@ import styled from "styled-components";
 export const Home = styled.div`
   display: flex;
   flex-wrap: wrap;
-  flex-basis: 50%;
- margin-top:2rem;
+  gap: 1rem;
+  
 `;
 
-export const StyledCard = styled.div`
-  width: 15vw;
-`;
+export const StyledCard = styled.div``;
 
 export const Img = styled.div`
   display: flex;
@@ -19,25 +17,33 @@ export const Img = styled.div`
     height: 22rem;
   }
 `;
-export const Div = styled.div`
-  display: flex;
-  justify-content: center;
-`;
+export const Div = styled.div``;
 
 export const Description = styled.div``;
 
 export const CardFormat = styled.div`
-  width: 20vw;
-  height: 50vh;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 20rem;
+  height:26rem;
+  
 `;
 
-export const Button = styled.img`
-  width: 3vw;
-  margin-top: 1rem;
+export const ImgButton = styled.img`
+  width: 3rem;
+`;
+
+export const Button = styled.button`
+  align-self: center;
+  background-color: #ffffff;
+  border: #ffffff;
   :hover {
-    width: 3.2vw;
+    background-color: lightblue;
+    border-radius: 2rem;
   }
   :active {
-    width: 2.8vw;
+    font-size: 2.2rem;
   }
 `;
