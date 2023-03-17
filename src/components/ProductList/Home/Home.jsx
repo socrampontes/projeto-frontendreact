@@ -22,15 +22,15 @@ export const Home = (props) => {
 
   return (
     <HomePage>
+      {/* <DivOrganization>
       <Contador>Quantidade de Itens: {counter}</Contador>
-      <DivOrganization>
         <LabelOrdenacao htmlFor="ordem">Ordenação:</LabelOrdenacao>
         <Select id="ordem" onChange={onChangeOrdem}>
           <Option value="">Ordenação</Option>
           <Option value="decrescente">Decrescente</Option>
           <Option value="crescente">Crescente</Option>
         </Select>
-      </DivOrganization>
+      </DivOrganization> */}
       <CardProduct
         product={props.product}
         productOrdem={productOrdem}

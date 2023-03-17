@@ -18,11 +18,7 @@ export const TagCarrinho = styled.h4`
   display: flex;
 `;
 
-export const ImgCart = styled.img`
-  height:50px;
-  width:70px;
-  margin:1rem 0 0 2rem;
-`;
+
 
 
 
@@ -38,7 +34,7 @@ export const Description = styled.p`
 export const Button = styled.button`
 margin: 1rem 4rem 1rem 4rem;
 height:1.5vw;
-width:6vw;
+
 border-radius:0.5rem;
 
 :hover{ background-color:lightgoldenrodyellow;}

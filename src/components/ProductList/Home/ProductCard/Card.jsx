@@ -1,4 +1,4 @@
-import { Home, Img, CardFormat, Description, Button, Div } from "./cardStyled";
+import { Home, Img, CardFormat, Description, Button, ImgButton } from "./cardStyled";
 
 export const CardProduct = (props) => {
   /* const addCart = (product) => {
@@ -20,7 +20,7 @@ export const CardProduct = (props) => {
 
   const addCart = (product) => {
     const novoCart = [...props.cart, product];
-  props.setCart(novoCart);
+    props.setCart(novoCart);
   };
 
   return (
@@ -53,20 +53,18 @@ export const CardProduct = (props) => {
         .map((product) => (
           <CardFormat key={product.id}>
             <Img>{product.imagemURL}</Img>
-            <Div>
-              <Description>{product.name}</Description>
-            </Div>
-            <Div>
-              <Description>valor: {product.price}</Description>
-            </Div>
-            <Div>
-              <button onClick={() => addCart(product)}>
-                <Button
-                  src="https://seeklogo.com/images/C/Carrinho_de_Compras-logo-F251151A71-seeklogo.com.png"
-                  alt=""
-                />
-              </button>
-            </Div>
+
+            <Description>{product.name}</Description>
+
+            <Description>valor: {product.price}</Description>
+
+            <Button onClick={() => addCart(product)}>
+              <ImgButton
+                src="https://seeklogo.com/images/C/Carrinho_de_Compras-logo-F251151A71-seeklogo.com.png"
+                alt="botão adicionar"
+              />
+              
+            </Button>
           </CardFormat>
         ))}
     </Home>

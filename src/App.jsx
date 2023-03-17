@@ -16,12 +16,12 @@ const GlobalStyle = createGlobalStyle`
   `;
 
 const Container = styled.div`
-  height: 80vh;
+  height: 80rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   height: 100%;
-  width: 100vw;
+  width: 100%;
   font-family: Arial, Helvetica, sans-serif;
 `;
 
@@ -38,8 +38,14 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Header hideCart={hideCart} setHideCart={setHideCart} />
       <Container>
+      <Header
+        hideCart={hideCart}
+        setHideCart={setHideCart}
+        searchFilter={searchFilter}
+        setSearchFilter={setSearchFilter}
+        cart={cart}
+      />
         <Filters
           minFilter={minFilter}
           maxFilter={maxFilter}
@@ -69,8 +75,8 @@ function App() {
           hideCart={hideCart}
           setHideCart={setHideCart}
         />
-      </Container>
       <FooterPage />
+      </Container>
     </>
   );
 }
