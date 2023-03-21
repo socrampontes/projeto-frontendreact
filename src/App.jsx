@@ -16,7 +16,6 @@ const GlobalStyle = createGlobalStyle`
   `;
 
 const Container = styled.div`
-  height: 80rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -26,7 +25,6 @@ const Container = styled.div`
 `;
 
 function App() {
-  const [amount, setAmount] = useState("");
   const [cart, setCart] = useState([]);
   const [minFilter, setMinFilter] = useState("");
   const [maxFilter, setMaxFilter] = useState("");
@@ -34,60 +32,50 @@ function App() {
   const [product, setProduct] = useState(ProductList);
   const [hideCart, setHideCart] = useState(true);
   const [hideFilter, setHideFilter] = useState(true);
-
+  const [productOrdem, setProductOrdem] = useState("");
+  const [amountItens, setAmountItens] = useState();
+  
   return (
     <>
       <GlobalStyle />
       <Container>
-      <Header
-        hideCart={hideCart}
-        setHideCart={setHideCart}
-        searchFilter={searchFilter}
-        setSearchFilter={setSearchFilter}
-        cart={cart}
-      />
+        <Header
+          HideCart={hideCart}
+          SetHideCart={setHideCart}
+          SearchFilter={searchFilter}
+          SetSearchFilter={setSearchFilter}
+          Cart={cart}
+          AmountItens={amountItens}
+          setAmountItens={setAmountItens}
+        />
         <Filters
-          minFilter={minFilter}
-          maxFilter={maxFilter}
-          searchFilter={searchFilter}
-          setMinFilter={setMinFilter}
-          setMaxFilter={setMaxFilter}
-          setSearchFilter={setSearchFilter}
-          hideFilter={hideFilter}
-          setHideFilter={setHideFilter}
+          MinFilter={minFilter}
+          MaxFilter={maxFilter}
+          SetMinFilter={setMinFilter}
+          SetMaxFilter={setMaxFilter}
+          HideFilter={hideFilter}
+          SetHideFilter={setHideFilter}
         />
         <Home
-          searchFilter={searchFilter}
-          product={product}
-          amount={amount}
-          setAmount={setAmount}
-          cart={cart}
-          setCart={setCart}
-          maxFilter={maxFilter}
-          minFilter={minFilter}
+          SearchFilter={searchFilter}
+          Product={product}
+          Cart={cart}
+          SetCart={setCart}
+          MaxFilter={maxFilter}
+          MinFilter={minFilter}
+          ProductOrdem={productOrdem}
+          SetProductOrdem={setProductOrdem}
         />
-
         <Cart
-          amount={amount}
-          cart={cart}
-          setAmount={setAmount}
-          setCart={setCart}
-          hideCart={hideCart}
-          setHideCart={setHideCart}
+          Cart={cart}
+          SetCart={setCart}
+          HideCart={hideCart}
+          SetHideCart={setHideCart}
         />
-      <FooterPage />
+        <FooterPage />
       </Container>
     </>
   );
 }
 
 export default App;
-
-{
-  /* <Home 
-amount={amount}
-cart={cart}
-setAmount={setAmount}
-setCart={setCart}
-/> */
-}

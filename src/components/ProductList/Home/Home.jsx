@@ -1,47 +1,61 @@
 import { useState } from "react";
+import { Orden } from "../../Filters/ordem/ordenStyled";
 import {
   HomePage,
+  DivOrganization,
   Contador,
   LabelOrdenacao,
   Select,
   Option,
-  DivOrganization,
 } from "./homePageStyled";
 import { CardProduct } from "./ProductCard/Card";
 export const Home = (props) => {
-  const [productOrdem, setProductOrdem] = useState("");
+  const {
+    SearchFilter,
+  Product,
+  Amount,
+  SetAmount,
+  Cart,
+  SetCart,
+  MaxFilter,
+  MinFilter,
+  ProductOrdem,
+  SetProductOrdem,
+  } = props;
 
   let counter = 0;
-  for (let obj of props.product) {
-    if (obj.quantidade === 1) counter++;
+  for (let obj of Product) {
+    if (obj.price >= 1) counter++;
   }
 
   const onChangeOrdem = (e) => {
-    setProductOrdem(e.target.value);
+    SetProductOrdem(e.target.value);
   };
 
   return (
-    <HomePage>
-      {/* <DivOrganization>
-      <Contador>Quantidade de Itens: {counter}</Contador>
-        <LabelOrdenacao htmlFor="ordem">Ordenação:</LabelOrdenacao>
-        <Select id="ordem" onChange={onChangeOrdem}>
-          <Option value="">Ordenação</Option>
-          <Option value="decrescente">Decrescente</Option>
-          <Option value="crescente">Crescente</Option>
-        </Select>
-      </DivOrganization> */}
-      <CardProduct
-        product={props.product}
-        productOrdem={productOrdem}
-        searchFilter={props.searchFilter}
-        minFilter={props.minFilter}
-        maxFilter={props.maxFilter}
-        cart={props.cart}
-        setCart={props.setCart}
-        amount={props.amount}
-        setAmount={props.setAmount}
-      />
-    </HomePage>
+    <>
+      <HomePage>
+        <DivOrganization>
+          <Contador>Quantidade de Itens: {counter}</Contador>
+          <div>
+            <LabelOrdenacao htmlFor="ordem">Ordenação:</LabelOrdenacao>
+            <Select id="ordem" onChange={onChangeOrdem}>
+              <Option value="">Ordenação</Option>
+              <Option value="decrescente">Decrescente</Option>
+              <Option value="crescente">Crescente</Option>
+            </Select>
+          </div>
+        </DivOrganization>
+        <CardProduct
+          ProductOrdem={ProductOrdem}
+          Product={Product}
+          SearchFilter={SearchFilter}
+          MinFilter={MinFilter}
+          MaxFilter={MaxFilter}
+          Cart={Cart}
+          SetCart={SetCart}
+        />
+      </HomePage>
+    </>
   );
 };

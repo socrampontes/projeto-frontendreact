@@ -1,56 +1,54 @@
-
 import styled from "styled-components";
 
 export const ShoppingCart = styled.div`
+display:flex;
+gap:3rem;
 `;
 
 export const Form = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items:center;
+  justify-content: space-between;
   
+  align-items: center;
 `;
-
-
 
 export const TagCarrinho = styled.h4`
   display: flex;
 `;
 
-
-
-
-
-
-
-
-
-export const Description = styled.p`
-
-
-
+export const ImagemCart = styled.div`
+  display: flex;
+  justify-content: center;
+  img {
+    width: 3rem;
+    height: 4rem;
+  }
 `;
+
+export const Description = styled.p``;
 export const Button = styled.button`
-margin: 1rem 4rem 1rem 4rem;
-height:1.5vw;
+  height: 1.5vw;
 
-border-radius:0.5rem;
-
-:hover{ background-color:lightgoldenrodyellow;}
-:active{font-size:12px;}
-
-
-`
-
+  border-radius: 0.5rem;
+  border: black 1px;
+  :hover {
+    background-color: lightgoldenrodyellow;
+  }
+  :active {
+    font-size: 12px;
+  }
+`;
+export const DivOrganization = styled.div`
+  width:14rem;
+`;
 
 export const CardFormat = styled.div`
   display: flex;
-  
-  
-  border: black solid;
- 
-  
+  align-items: center;
+  justify-content: space-around;
+  height: 6rem;
+  width: 17rem;
+  margin-top: 0.3rem;
+  border: gray solid 1px;
+  border-radius: 1rem;
 `;
-
-

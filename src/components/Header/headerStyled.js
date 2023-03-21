@@ -13,6 +13,9 @@ export const Logo = styled.img`
   height: 4.7rem;
   
 `;
+export const Link = styled.a`
+  flex-direction: flex-end;
+`;
 export const SearchName = styled.input`
   flex-basis: 15%;
   height: 2rem;
@@ -24,15 +27,12 @@ export const SearchName = styled.input`
 export const OrganizaDiv = styled.div`
   display: flex;
 `;
-export const Link = styled.a`
-  flex-direction: flex-end;
-`;
 
 export const Button = styled.button`
   background-color: #87cefa;
   border: #87cefa;
   :active {
-    font-size: 2.2rem;
+    font-size: 0.9rem;
   }
   :hover {
     background-color: lightblue;
@@ -51,3 +51,8 @@ export const Counter = styled.p`
   width: 1rem;
   border-radius: 3rem;
 `;
+export const FreteGratis = styled.div`
+display:flex;
+align-self:center;
+
+`

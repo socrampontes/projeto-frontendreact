@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ShoppingCart = styled.div`
-  flex-basis: 10%;
+  flex-basis: 15%;
   height: 60vh;
 `;
 
