@@ -1,19 +1,18 @@
-import {
-  ShoppingCart,
-  
-} from "./CartStyled";
+import { ShoppingCart } from "./CartStyled";
 import { Items } from "./Items/Items";
 
 export const Cart = (props) => {
+  const {Cart, SetAmount, SetCart, HideCart } = props;
   return (
-    <ShoppingCart>
-      <Items
-        product={props.cart}
-        setCart={props.setCart}
-        setAmount={props.setAmount}
-        amount={props.amount}
-        hideCart={props.hideCart}
-      />
-    </ShoppingCart>
+    <>
+      <ShoppingCart>
+        <Items
+          Product={Cart}
+          SetCart={SetCart}
+          SetAmount={SetAmount}
+          HideCart={HideCart}
+        />
+      </ShoppingCart>
+    </>
   );
 };

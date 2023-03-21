@@ -1,37 +1,54 @@
-import { Form, Input, StyledLabel, Orden, ButtonFilter } from "./ordenStyled";
+import { Form, Input, StyledLabel, Orden, ButtonFilter,ButtonClearFilter } from "./ordenStyled";
 
 export const Filters = (props) => {
-  
-  const searchByName =(e)=>{
-    props.setSearchFilter(e.target.value)
+  const {
+    MinFilter,
+    MaxFilter,
+    SetMinFilter,
+    SetMaxFilter,
+    HideFilter,
+    SetHideFilter,
+  } = props;
+
+  const minValueFilter = (e) => {
+    SetMinFilter(e.target.value);
+  };
+  const maxValueFilter = (e) => {
+    SetMaxFilter(e.target.value);
+  };
+  const bntHideFilter = () => {
+    SetHideFilter(!HideFilter);
+  };
+  const bntClearFilter = ()=>{
+    SetMaxFilter("");
+    SetMinFilter("");
   }
-  const minValueFilter =(e)=>{
-    props.setMinFilter(e.target.value)
-  }
-  const maxValueFilter =(e)=>{
-    props.setMaxFilter(e.target.value)
-  }
-  const bntHideFilter=()=>{
-    props.setHideFilter(!props.hideFilter)
-    }
 
   return (
+    <>
     <Orden>
       <div>
-      <ButtonFilter onClick={bntHideFilter}>filtros</ButtonFilter>
+        <ButtonFilter onClick={bntHideFilter}>Filtros</ButtonFilter>
       </div>
-      <Form style={{display: props.hideFilter ? "none" : "block" }}>
-        
-
+      <Form style={{ display: HideFilter ? "none" : "block" }}>
         <StyledLabel>Valor mínimo:</StyledLabel>
-        <Input type="number" placeholder="Preço Minimo" value={props.minFilter}
-        onChange={minValueFilter}/>
+        <Input
+          type="number"
+          placeholder="Preço Minimo"
+          value={MinFilter}
+          onChange={minValueFilter}
+        />
 
         <StyledLabel>Valor máximo:</StyledLabel>
-        <Input type="number" placeholder="Preço Máximo" value={props.maxFilter}
-        onChange={maxValueFilter} />
-       
+        <Input
+          type="number"
+          placeholder="Preço Máximo"
+          value={MaxFilter}
+          onChange={maxValueFilter}
+        />
+        <ButtonClearFilter onClick={bntClearFilter}>Limpar filtros</ButtonClearFilter>
       </Form>
     </Orden>
+    </>
   );
 };
