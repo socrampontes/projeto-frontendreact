@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Header } from "./components/Header/Header";
 import { Filters } from "./components/Filters/ordem/Filter";
 import { Cart } from "./components/ShoppingCart/Cart/Cart";
@@ -34,7 +34,19 @@ function App() {
   const [hideFilter, setHideFilter] = useState(true);
   const [productOrdem, setProductOrdem] = useState("");
   const [amountItens, setAmountItens] = useState();
+
+ /*   useEffect(() => {
+    const productLocal = localStorage.getItem("produtos");
+    
+      
+      setCart(JSON.parse(productLocal));
+    
+    
+  }, []);     */
   
+  console.log(cart)
+ 
+
   return (
     <>
       <GlobalStyle />

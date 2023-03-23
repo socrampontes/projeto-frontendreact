@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ShoppingCart = styled.div`
-display:flex;
+display:${props=>props.hideCart ? "none" : "block" };
 gap:3rem;
 `;
 
@@ -16,13 +16,11 @@ export const TagCarrinho = styled.h4`
   display: flex;
 `;
 
-export const ImagemCart = styled.div`
-  display: flex;
-  justify-content: center;
-  img {
+export const Img = styled.img`
+ 
     width: 3rem;
     height: 4rem;
-  }
+  
 `;
 
 export const Description = styled.p``;

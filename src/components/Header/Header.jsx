@@ -20,12 +20,17 @@ export const Header = (props) => {
   const searchByName = (e) => {
     SetSearchFilter(e.target.value);
   };
+
+
   let counter = 0;
-  for (let obj of Cart) {
-    if (obj.quantidade>0) 
-    counter += obj.quantidade
-    
-  }
+  for (let obj of Cart ) {
+    if (obj.quantity>0) 
+    counter += obj.quantity
+    }
+    if(counter === 0){
+      counter =""
+    }
+
 
   return (
     <>
