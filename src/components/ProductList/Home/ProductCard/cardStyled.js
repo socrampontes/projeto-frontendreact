@@ -4,18 +4,13 @@ export const Home = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  
 `;
 
 export const StyledCard = styled.div``;
 
-export const Img = styled.div`
-  display: flex;
-  justify-content: center;
-  img {
-    width: 17rem;
-    height: 22rem;
-  }
+export const Img = styled.img`
+  width: 17rem;
+  height: 22rem;
 `;
 export const Div = styled.div``;
 
@@ -27,8 +22,7 @@ export const CardFormat = styled.div`
   flex-direction: column;
   text-align: center;
   width: 20rem;
-  height:26rem;
-  
+  height: 26rem;
 `;
 
 export const ImgButton = styled.img`

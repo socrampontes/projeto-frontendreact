@@ -3,6 +3,7 @@ import { Items } from "./Items/Items";
 
 export const Cart = (props) => {
   const {Cart, SetAmount, SetCart, HideCart } = props;
+  
   return (
     <>
       <ShoppingCart>

@@ -19,17 +19,21 @@ export const CardProduct = (props) => {
  
   const addCart = (product) => {
     const newCart = [...Cart];
-
+   
+  
     if (newCart.includes(product)) {
-      newCart.filter((iten) => iten === product)[0].quantidade++;
+      newCart.filter((iten) => iten === product)[0].quantity++;
 
       SetCart(newCart);
     } else {
-      Product.quantidade = 1;
+      Product.quantity = 1;
       const newCart2 = [...Cart, product];
       SetCart(newCart2);
     }
+    console.log()
   };
+
+  
 
   return (
     <Home>
@@ -55,8 +59,9 @@ export const CardProduct = (props) => {
         })
         .map((product) => (
           <CardFormat key={product.id}>
-            <Img>{product.imagemURL}</Img>
-
+            <div>
+            <Img src={product.imagemURL} alt={product.name}/>
+            </div>
             <Description>{product.name}</Description>
 
             <Description>valor: {product.price}</Description>
@@ -72,3 +77,4 @@ export const CardProduct = (props) => {
     </Home>
   );
 };
+
