@@ -35,17 +35,14 @@ function App() {
   const [productOrdem, setProductOrdem] = useState("");
   const [amountItens, setAmountItens] = useState();
 
- /*   useEffect(() => {
+  useEffect(() => {
     const productLocal = localStorage.getItem("produtos");
-    
-      
-      setCart(JSON.parse(productLocal));
-    
-    
-  }, []);     */
-  
-  console.log(cart)
- 
+    setCart(JSON.parse(productLocal));
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("produtos", JSON.stringify(cart));
+  }, [cart]);
 
   return (
     <>

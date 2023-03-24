@@ -13,8 +13,6 @@ export const Home = (props) => {
   const {
     SearchFilter,
   Product,
-  Amount,
-  SetAmount,
   Cart,
   SetCart,
   MaxFilter,

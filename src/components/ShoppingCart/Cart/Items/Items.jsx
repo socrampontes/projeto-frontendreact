@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import {
   ShoppingCart,
   Form,
@@ -10,8 +10,8 @@ import {
 } from "./ItemsStyled";
 export const Items = (props) => {
   const { Product, SetCart, HideCart } = props;
-  const [array, setArray] = useState([]);
-  console.log(array)
+ 
+
   let counter = 0;
   for (const obj of Product) {
     if (obj.price > 0) counter += obj.price;
@@ -47,12 +47,6 @@ export const Items = (props) => {
     )
   );
 
- /*  useEffect(() => {
-    for (let item of Product) {
-      setArray(item)
-      localStorage.setItem("produtos", JSON.stringify(array));
-    }
-  }, [Product]); */
 
    useEffect(() => {
     localStorage.setItem("produtos", JSON.stringify(Product));
