@@ -21,7 +21,7 @@ export const CreatedBy = styled.p`
 export const Icons = styled.img`
   width:3rem;
   height:3rem;
-  margin-top:1rem;
+  margin-top:0.5rem;
 `;
 
 
@@ -30,11 +30,11 @@ export const DivOrganization = styled.footer`
   
   display: flex;
   justify-content:space-around;
-  margin-bottom:2rem;
+  margin:1rem;
 `;
 
 export const Menu = styled.div`
-
-
-
+h3{
+  margin-left:1rem
+}
 `
