@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HomePage = styled.div`
-  flex-basis: 70%;
+  flex-basis: 67%;
   margin-bottom: 5rem;
 `;
 export const Contador = styled.div`
