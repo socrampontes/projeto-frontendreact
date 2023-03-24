@@ -6,7 +6,6 @@ import {
   Logo,
   SearchName,
   Counter,
-  FreteGratis
 } from "./headerStyled";
 export const Header = (props) => {
   
