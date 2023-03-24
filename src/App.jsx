@@ -33,7 +33,7 @@ function App() {
   const [hideCart, setHideCart] = useState(true);
   const [hideFilter, setHideFilter] = useState(true);
   const [productOrdem, setProductOrdem] = useState("");
-  const [amountItens, setAmountItens] = useState();
+
 
   useEffect(() => {
     const productLocal = localStorage.getItem("produtos");
@@ -54,8 +54,7 @@ function App() {
           SearchFilter={searchFilter}
           SetSearchFilter={setSearchFilter}
           Cart={cart}
-          AmountItens={amountItens}
-          setAmountItens={setAmountItens}
+         
         />
         <Filters
           MinFilter={minFilter}

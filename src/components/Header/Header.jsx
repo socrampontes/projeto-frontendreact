@@ -8,9 +8,7 @@ import {
   Counter,
 } from "./headerStyled";
 export const Header = (props) => {
-  
-  const { HideCart, SetHideCart, SearchFilter, SetSearchFilter, Cart,AmountItens,
-  setAmountItens } = props;
+  const { HideCart, SetHideCart, SearchFilter, SetSearchFilter, Cart } = props;
 
   const bntHideCart = () => {
     SetHideCart(!HideCart);
@@ -20,20 +18,16 @@ export const Header = (props) => {
     SetSearchFilter(e.target.value);
   };
 
-
   let counter = 0;
-  for (let obj of Cart ) {
-    if (obj.quantity>0) 
-    counter += obj.quantity
-    }
-    if(counter === 0){
-      counter =""
-    }
-
+  for (let obj of Cart) {
+    if (obj.quantity > 0) counter += obj.quantity;
+  }
+  if (counter === 0) {
+    counter = "";
+  }
 
   return (
     <>
-    
       <TitleHeader>
         <Link href="">
           <Logo
@@ -48,7 +42,6 @@ export const Header = (props) => {
             value={SearchFilter}
             onChange={searchByName}
           />
-          
         </form>
         <Button onClick={bntHideCart}>
           <ImgCart
