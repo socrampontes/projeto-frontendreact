@@ -30,11 +30,11 @@ export const DivOrganization = styled.footer`
   
   display: flex;
   justify-content:space-around;
-  margin-bottom:2rem;
+  margin-bottom:1rem;
 `;
 
 export const Menu = styled.div`
-
-
-
+h3{
+  margin-left:1rem
+}
 `
